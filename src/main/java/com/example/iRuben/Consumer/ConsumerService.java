@@ -49,4 +49,17 @@ public class ConsumerService {
             consumer.setEmail(email);
         }
     }
+
+    @Transactional
+    public void addExperience(Long consumerId){
+        Consumer consumer = consumerRepository.findById(consumerId)
+                .orElseThrow(()-> new IllegalStateException("" +
+                        "Юзер с таким id не найден!"));
+        if(consumer.getExperience()>0 && consumer.getExperience()<39){
+            consumer.addExperience();
+        }
+        else{
+            throw new IllegalStateException("Что-то с опытом не так!");
+        }
+    }
 }
