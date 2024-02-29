@@ -33,4 +33,9 @@ public class ConsumerController {
             {
                 consumerService.updateConsumer(consumerId,name,email);
     }
+
+    @PutMapping(path="{consumerId}/add")
+    public void addExperience(@PathVariable("consumerId") Long consumerId){
+        consumerService.addExperience(consumerId);
+    }
 }
