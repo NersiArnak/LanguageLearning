@@ -16,7 +16,7 @@ public class UserConfig {
                     "admin",
                     "eternity_cr9p@mail.ru",
                     "admin",
-                    32
+                    39
             );
             repository.save(admin);
         };
