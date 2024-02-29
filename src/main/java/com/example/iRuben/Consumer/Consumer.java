@@ -39,6 +39,11 @@ public class Consumer {
         this.experience = experience;
     }
 
+    public int addExperience(){
+        experience++;
+        return experience;
+    }
+
     public Long getId() {
         return id;
     }
